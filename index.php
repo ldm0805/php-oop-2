@@ -20,6 +20,7 @@ include __DIR__ . '/database.php'
 
 <body>
     <div class="container-fluid">
+        <h1 class="text-center mt-4">Boolshop</h1>
         <div class="row">
             <div class="card-con">
                 <!-- ForEach per ciclare l'array del cibo -->
