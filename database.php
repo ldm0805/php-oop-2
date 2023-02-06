@@ -21,3 +21,22 @@ $arrayProductChildsAccessories = [$productChild5, $productChild6];
 $productChild7 = new AnimalGame("Kong Classic", "13,49",  "https://www.naturepetshop.it/wp-content/uploads/T1_1_1000x1000.jpg", "Cane", "Galleggia e Rimbalza", "8,5 x 10cm", "Legno");
 $productChild8 = new AnimalGame("Topini di peluche Trixie",  "4,99",  "https://shop-cdn-m.mediazs.com/bilder/topini/di/peluche/trixie/8/800/42535_trixie_plueschmaus_weiss_hs_02_8.jpg", "Gatto", "Morbido con codina in corda", "8,5 cm x 10cm");
 $arrayProductChildsGames = [$productChild7, $productChild8];
+
+
+function changeIcon($race)
+{
+    switch ($race) {
+        case 'Cane':
+            return '<i class="fa-solid fa-dog"></i>';
+            break;
+        case 'Gatto':
+            return '<i class="fa-solid fa-cat"></i>';
+            break;
+        case 'Pesce':
+            return '<i class="fa-solid fa-fish-fins"></i>';
+            break;
+        default:
+            return '<i class="fa-solid fa-kiwi-bird"></i>';
+            break;
+    }
+}
