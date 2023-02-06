@@ -13,6 +13,4 @@ class AnimalAccessory extends AllProducts
     }
 }
 
-$product = new AnimalAccessory("Cuccia canin", "50",  "https://picsum.photos/200", "Legno", "Dimensioni");
-echo '<pre>';
-var_dump($product);
+$product = new AnimalAccessory("Royal canin", "50",  "https://picsum.photos/200", "Legno", "Dimensioni");

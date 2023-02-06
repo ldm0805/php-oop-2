@@ -4,15 +4,13 @@ class AnimalFood extends AllProducts
 {
     public $race;
     public $weight;
+    public $ingredients;
 
-    public function __construct($title, $price, $image, $weight, $race)
+    public function __construct($title, $price, $image, $weight, $race, $ingredients)
     {
         parent::__construct($title, $price, $image);
         $this->race = $race;
         $this->weight = $weight;
+        $this->ingredients = $ingredients;
     }
 }
-
-$product = new AnimalFood("Royal canin", "50",  "https://picsum.photos/200", "600", "cane");
-echo '<pre>';
-var_dump($product);

@@ -19,7 +19,41 @@ include __DIR__ . '/database.php'
 </head>
 
 <body>
-
+    <div class="container-fluid">
+        <div class="row">
+            <div class="card-cont d-flex">
+                <!-- ForEach per ciclare la classe -->
+                <?php foreach ($arrayProductChilds as $childs) { ?>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="<?php echo $childs->image; ?>" alt="Card image cap">
+                        <div class="card-body">
+                            <h3><?php echo $childs->title; ?></h3>
+                            <p class="card-text">Animale:
+                                <span>
+                                    <?php echo $childs->race; ?>.
+                                </span>
+                            </p>
+                            <p class="card-text ">Prezzo:
+                                <span>
+                                    <?php echo $childs->price; ?>.
+                                </span>
+                            </p>
+                            <p class="card-text">Peso:
+                                <span>
+                                    <?php echo $childs->weight; ?>.
+                                </span>
+                            </p>
+                            <p class="card-text">Peso:
+                                <span>
+                                    <?php echo $childs->ingredients; ?>.
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
