@@ -24,93 +24,46 @@ include __DIR__ . '/database.php'
         <div class="row">
             <div class="card-con">
                 <!-- ForEach per ciclare l'array del cibo -->
-                <?php foreach ($arrayProductChildsFood as $childs) { ?>
-                    <div class="card">
-                        <img class="card-img-top" src="<?php echo $childs->image; ?>" alt="Card image cap">
-                        <div class="card-body">
-                            <h3><?php echo $childs->title; ?></h3>
-                            <p class="card-text">
-                                <span>
-                                    <?php echo changeIcon($childs->race); ?>
-                                    <?php echo $childs->race; ?>.
-                                </span>
-                            </p>
-                            <p class="card-text ">Prezzo:
-                                <span>
-                                    <?php echo $childs->price; ?>&euro;.
-                                </span>
-                            </p>
-                            <p class="card-text">Peso:
-                                <span>
-                                    <?php echo $childs->weight; ?>.
-                                </span>
-                            </p>
-                            <p class="card-text">Ingredienti:
-                                <span>
-                                    <?php echo $childs->ingredients; ?>.
-                                </span>
-                            </p>
-                        </div>
-                    </div>
-                <?php } ?>
-                <!-- ForEach per ciclare l'array degli accessori -->
-                <?php foreach ($arrayProductChildsAccessories as $childs) { ?>
-
+                <?php
+                $arrayProductChilds = array_merge($arrayProductChildsFood, $arrayProductChildsAccessories, $arrayProductChildsGames);
+                foreach ($arrayProductChilds as $childs) {
+                ?>
                     <div class="card">
                         <img class="card-img-top" src="<?php echo $childs->image; ?>" alt="Card image cap">
                         <div class="card-body">
                             <h3><?php echo $childs->title; ?></h3>
                             <p class="card-text">
                                 <?php echo changeIcon($childs->race); ?>
-                                <span>
-                                    <?php echo $childs->race; ?>.
-                                </span>
+                                <span><?php echo $childs->race; ?>.</span>
                             </p>
                             <p class="card-text ">Prezzo:
-                                <span>
-                                    <?php echo $childs->price; ?>&euro;.
-                                </span>
+                                <span><?php echo $childs->price; ?>&euro;.</span>
                             </p>
-                            <p class="card-text">Dimensioni:
-                                <span>
-                                    <?php echo $childs->material; ?>.
-                                </span>
-                            </p>
-                            <p class="card-text">Materiale:
-                                <span>
-                                    <?php echo $childs->dimension; ?>.
-                                </span>
-                            </p>
-                        </div>
-                    </div>
-                <?php } ?>
-                <!-- ForEach per ciclare l'array dei giochi -->
-                <?php foreach ($arrayProductChildsGames as $childs) { ?>
-                    <div class="card">
-                        <img class="card-img-top" src="<?php echo $childs->image; ?>" alt="Card image cap">
-                        <div class="card-body">
-                            <h3><?php echo $childs->title; ?></h3>
-                            <p class="card-text">
-                                <?php echo changeIcon($childs->race); ?>
-                                <span>
-                                    <?php echo $childs->race; ?>.
-                                </span>
-                            </p>
-                            <p class="card-text ">Prezzo:
-                                <span>
-                                    <?php echo $childs->price; ?>&euro;.
-                                </span>
-                            </p>
-                            <p class="card-text">Caratteristiche:
-                                <span>
-                                    <?php echo $childs->description; ?>.
-                                </span>
-                            </p>
-                            <p class="card-text">Dimensione:
-                                <span>
-                                    <?php echo $childs->dimension; ?>.
-                                </span>
-                            </p>
+                            <?php if (isset($childs->weight)) { ?>
+                                <p class="card-text">Peso:
+                                    <span><?php echo $childs->weight; ?>.</span>
+                                </p>
+                            <?php } ?>
+                            <?php if (isset($childs->ingredients)) { ?>
+                                <p class="card-text">Ingredienti:
+                                    <span><?php echo $childs->ingredients; ?>.</span>
+                                </p>
+                            <?php } ?>
+                            <?php if (isset($childs->material)) { ?>
+                                <p class="card-text">Materiale:
+                                    <span><?php echo $childs->material; ?>.</span>
+                                </p>
+                            <?php } ?>
+                            <?php if (isset($childs->dimension)) { ?>
+                                <p class="card-text">Dimensioni:
+                                    <span><?php echo $childs->dimension; ?>.</span>
+                                </p>
+                            <?php } ?>
+                            <?php if (isset($childs->description)) { ?>
+                                <p class="card-text">Caratteristiche:
+                                    <span><?php echo $childs->description; ?>.</span>
+                                </p>
+                            <?php } ?>
                         </div>
                     </div>
                 <?php } ?>
