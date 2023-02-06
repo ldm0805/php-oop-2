@@ -29,15 +29,14 @@ include __DIR__ . '/database.php'
                         <div class="card-body">
                             <h3><?php echo $childs->title; ?></h3>
                             <p class="card-text">
-                                <?php echo changeIcon($childs->race); ?>
-
                                 <span>
+                                    <?php echo changeIcon($childs->race); ?>
                                     <?php echo $childs->race; ?>.
                                 </span>
                             </p>
                             <p class="card-text ">Prezzo:
                                 <span>
-                                    <?php echo $childs->price; ?>.
+                                    <?php echo $childs->price; ?>&euro;.
                                 </span>
                             </p>
                             <p class="card-text">Peso:
@@ -60,15 +59,15 @@ include __DIR__ . '/database.php'
                         <img class="card-img-top" src="<?php echo $childs->image; ?>" alt="Card image cap">
                         <div class="card-body">
                             <h3><?php echo $childs->title; ?></h3>
-                            <?php echo changeIcon($childs->race); ?>
                             <p class="card-text">
+                                <?php echo changeIcon($childs->race); ?>
                                 <span>
                                     <?php echo $childs->race; ?>.
                                 </span>
                             </p>
                             <p class="card-text ">Prezzo:
                                 <span>
-                                    <?php echo $childs->price; ?>.
+                                    <?php echo $childs->price; ?>&euro;.
                                 </span>
                             </p>
                             <p class="card-text">Dimensioni:
@@ -84,21 +83,21 @@ include __DIR__ . '/database.php'
                         </div>
                     </div>
                 <?php } ?>
-                <!-- ForEach per ciclare l'array degli accessori -->
+                <!-- ForEach per ciclare l'array dei giochi -->
                 <?php foreach ($arrayProductChildsGames as $childs) { ?>
                     <div class="card">
                         <img class="card-img-top" src="<?php echo $childs->image; ?>" alt="Card image cap">
                         <div class="card-body">
                             <h3><?php echo $childs->title; ?></h3>
-                            <?php echo changeIcon($childs->race); ?>
                             <p class="card-text">
+                                <?php echo changeIcon($childs->race); ?>
                                 <span>
                                     <?php echo $childs->race; ?>.
                                 </span>
                             </p>
                             <p class="card-text ">Prezzo:
                                 <span>
-                                    <?php echo $childs->price; ?>.
+                                    <?php echo $childs->price; ?>&euro;.
                                 </span>
                             </p>
                             <p class="card-text">Caratteristiche:
@@ -106,7 +105,7 @@ include __DIR__ . '/database.php'
                                     <?php echo $childs->description; ?>.
                                 </span>
                             </p>
-                            <p class="card-text">Materiale:
+                            <p class="card-text">Dimensione:
                                 <span>
                                     <?php echo $childs->dimension; ?>.
                                 </span>
