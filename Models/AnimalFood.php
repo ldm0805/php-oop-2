@@ -2,14 +2,12 @@
 
 class AnimalFood extends AllProducts
 {
-    public $race;
     public $weight;
     public $ingredients;
 
-    public function __construct($title, $price, $image, $weight, $race, $ingredients)
+    public function __construct($title, $race, $price, $image, $weight, $ingredients)
     {
-        parent::__construct($title, $price, $image);
-        $this->race = $race;
+        parent::__construct($title, $race, $price, $image);
         $this->weight = $weight;
         $this->ingredients = $ingredients;
     }

@@ -1,6 +1,5 @@
 <?php
 include __DIR__ . '/database.php'
-
 ?>
 
 <!DOCTYPE html>
@@ -21,10 +20,10 @@ include __DIR__ . '/database.php'
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="card-cont d-flex">
-                <!-- ForEach per ciclare la classe -->
-                <?php foreach ($arrayProductChilds as $childs) { ?>
-                    <div class="card" style="width: 18rem;">
+            <div class="card-cont">
+                <!-- ForEach per ciclare l'array del cibo -->
+                <?php foreach ($arrayProductChildsFood as $childs) { ?>
+                    <div class="card" style="width: 12rem;">
                         <img class="card-img-top" src="<?php echo $childs->image; ?>" alt="Card image cap">
                         <div class="card-body">
                             <h3><?php echo $childs->title; ?></h3>
@@ -43,7 +42,7 @@ include __DIR__ . '/database.php'
                                     <?php echo $childs->weight; ?>.
                                 </span>
                             </p>
-                            <p class="card-text">Peso:
+                            <p class="card-text">Ingredienti:
                                 <span>
                                     <?php echo $childs->ingredients; ?>.
                                 </span>
@@ -51,6 +50,65 @@ include __DIR__ . '/database.php'
                         </div>
                     </div>
                 <?php } ?>
+                <!-- ForEach per ciclare l'array degli accessori -->
+                <?php foreach ($arrayProductChildsAccessories as $childs) { ?>
+                    <div class="card" style="width: 12rem;">
+                        <img class="card-img-top" src="<?php echo $childs->image; ?>" alt="Card image cap">
+                        <div class="card-body">
+                            <h3><?php echo $childs->title; ?></h3>
+                            <p class="card-text">Animale:
+                                <span>
+                                    <?php echo $childs->race; ?>.
+                                </span>
+                            </p>
+                            <p class="card-text ">Prezzo:
+                                <span>
+                                    <?php echo $childs->price; ?>.
+                                </span>
+                            </p>
+                            <p class="card-text">Dimensioni:
+                                <span>
+                                    <?php echo $childs->material; ?>.
+                                </span>
+                            </p>
+                            <p class="card-text">Materiale:
+                                <span>
+                                    <?php echo $childs->dimension; ?>.
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                <?php } ?>
+                <!-- ForEach per ciclare l'array degli accessori -->
+                <?php foreach ($arrayProductChildsGames as $childs) { ?>
+                    <div class="card" style="width: 12rem;">
+                        <img class="card-img-top" src="<?php echo $childs->image; ?>" alt="Card image cap">
+                        <div class="card-body">
+                            <h3><?php echo $childs->title; ?></h3>
+                            <p class="card-text">Animale:
+                                <span>
+                                    <?php echo $childs->race; ?>.
+                                </span>
+                            </p>
+                            <p class="card-text ">Prezzo:
+                                <span>
+                                    <?php echo $childs->price; ?>.
+                                </span>
+                            </p>
+                            <p class="card-text">Caratteristiche:
+                                <span>
+                                    <?php echo $childs->description; ?>.
+                                </span>
+                            </p>
+                            <p class="card-text">Materiale:
+                                <span>
+                                    <?php echo $childs->dimension; ?>.
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                <?php } ?>
+
             </div>
         </div>
     </div>
