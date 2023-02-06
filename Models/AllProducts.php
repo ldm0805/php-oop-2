@@ -1,16 +1,13 @@
 <?php
-class Food
+class AllProducts
 {
     public $title;
     public $price;
     public $image;
-    public $weight;
-
-    public function __construct($title, $price, $image, $weight)
+    public function __construct($title, $price, $image)
     {
         $this->title = $title;
         $this->price = $price;
         $this->image = $image;
-        $this->weight = $weight;
     }
 }
