@@ -6,7 +6,7 @@ include __DIR__ . './Models/AnimalGame.php';
 
 
 $productChild1 = new AnimalFood("Royal Canin Mini Adult", "43,99",  "https://picsum.photos/200", "Cane", "545g",  "Prosciutto Riso");
-$productChild2 = new AnimalFood("Almo Nature Holistic Maintenance Mediuom Large Tonno e Riso", "44,99",  "https://picsum.photos/200", "600g", "Cane", "Manzo, Cereali");
+$productChild2 = new AnimalFood("Almo Nature Holistic Maintenance Mediuom Large Tonno e Riso", "44,99",  "https://picsum.photos/200", "Cane", "600g", "Manzo, Cereali");
 $productChild3 = new AnimalFood("Almo Nature Cat Daily Lattina", "34,99",  "https://picsum.photos/200", "Gatto", "400g", "Tonno, Pollo, Prosciutto");
 $productChild4 = new AnimalFood("Mangime Per Pesci Guppy in Fiocchi", "2,95",  "https://picsum.photos/200", "Pesce", "30g", "Pesci e sottoprodotti dei pesci, Cereali, Lieviti,Alghe");
 

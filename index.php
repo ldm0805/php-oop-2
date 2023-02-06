@@ -10,6 +10,7 @@ include __DIR__ . '/database.php'
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.0/axios.min.js" integrity="sha512-A6BG70odTHAJYENyMrDN6Rq+Zezdk+dFiFFN6jH1sB+uJT3SYMV4zDSVR+7VawJzvq7/IrT/2K3YWVKRqOyN0Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -20,14 +21,16 @@ include __DIR__ . '/database.php'
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="card-cont">
+            <div class="card-con">
                 <!-- ForEach per ciclare l'array del cibo -->
                 <?php foreach ($arrayProductChildsFood as $childs) { ?>
-                    <div class="card" style="width: 12rem;">
+                    <div class="card">
                         <img class="card-img-top" src="<?php echo $childs->image; ?>" alt="Card image cap">
                         <div class="card-body">
                             <h3><?php echo $childs->title; ?></h3>
-                            <p class="card-text">Animale:
+                            <p class="card-text">
+                                <?php echo changeIcon($childs->race); ?>
+
                                 <span>
                                     <?php echo $childs->race; ?>.
                                 </span>
@@ -52,11 +55,13 @@ include __DIR__ . '/database.php'
                 <?php } ?>
                 <!-- ForEach per ciclare l'array degli accessori -->
                 <?php foreach ($arrayProductChildsAccessories as $childs) { ?>
-                    <div class="card" style="width: 12rem;">
+
+                    <div class="card">
                         <img class="card-img-top" src="<?php echo $childs->image; ?>" alt="Card image cap">
                         <div class="card-body">
                             <h3><?php echo $childs->title; ?></h3>
-                            <p class="card-text">Animale:
+                            <?php echo changeIcon($childs->race); ?>
+                            <p class="card-text">
                                 <span>
                                     <?php echo $childs->race; ?>.
                                 </span>
@@ -81,11 +86,12 @@ include __DIR__ . '/database.php'
                 <?php } ?>
                 <!-- ForEach per ciclare l'array degli accessori -->
                 <?php foreach ($arrayProductChildsGames as $childs) { ?>
-                    <div class="card" style="width: 12rem;">
+                    <div class="card">
                         <img class="card-img-top" src="<?php echo $childs->image; ?>" alt="Card image cap">
                         <div class="card-body">
                             <h3><?php echo $childs->title; ?></h3>
-                            <p class="card-text">Animale:
+                            <?php echo changeIcon($childs->race); ?>
+                            <p class="card-text">
                                 <span>
                                     <?php echo $childs->race; ?>.
                                 </span>

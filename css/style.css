@@ -4,7 +4,13 @@
     box-sizing: border-box;
 }
 
-.card-cont {
+.card-con {
     display: flex;
     flex-wrap: wrap;
+    width: 100vw;
+}
+
+.card {
+    margin: 3em;
+    width: calc(100% / 3 - 6em);
 }
