@@ -48,9 +48,9 @@ include __DIR__ . '/database.php'
                                     <?php echo $childs->weight; ?>.
                                 </p>
                             <?php } ?>
-                            <?php if (isset($childs->ingredients)) { ?>
+                            <?php if (isset($childs->ingredients) && is_array($childs->ingredients)) { ?>
                                 <p class="card-text">Ingredienti:
-                                    <?php echo $childs->ingredients; ?>.
+                                    <?php echo implode(', ', $childs->ingredients); ?>.
                                 </p>
                             <?php } ?>
                             <?php if (isset($childs->material)) { ?>
