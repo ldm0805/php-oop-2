@@ -43,29 +43,31 @@ include __DIR__ . '/database.php'
                             <p class="card-text ">Prezzo:
                                 <?php echo $childs->price; ?>&euro;.
                             </p>
-                            <?php if (isset($childs->weight)) { ?>
-                                <p class="card-text">Peso:
-                                    <?php echo $childs->weight; ?>.
+                            <?php
+                            if (get_class($childs) == 'AnimalFood') { ?>
+                                <p>
+                                    Peso: <?php echo $childs->weight; ?>
+                                </p>
+                                <p>
+                                    Ingredienti: <?php echo implode(', ', $childs->ingredients); ?>.
                                 </p>
                             <?php } ?>
-                            <?php if (isset($childs->ingredients) && is_array($childs->ingredients)) { ?>
-                                <p class="card-text">Ingredienti:
-                                    <?php echo implode(', ', $childs->ingredients); ?>.
+                            <?php
+                            if (get_class($childs) == 'AnimalGame') { ?>
+                                <p class="card-text">Caratteristiche:
+                                    <?php echo $childs->description; ?>.
                                 </p>
-                            <?php } ?>
-                            <?php if (isset($childs->material)) { ?>
-                                <p class="card-text">Materiale:
-                                    <?php echo $childs->material; ?>.
-                                </p>
-                            <?php } ?>
-                            <?php if (isset($childs->dimension)) { ?>
                                 <p class="card-text">Dimensioni:
                                     <?php echo $childs->dimension; ?>.
                                 </p>
                             <?php } ?>
-                            <?php if (isset($childs->description)) { ?>
-                                <p class="card-text">Caratteristiche:
-                                    <?php echo $childs->description; ?>.
+                            <?php
+                            if (get_class($childs) == 'AnimalAccessory') { ?>
+                                <p class="card-text">Materiale:
+                                    <?php echo $childs->material; ?>.
+                                </p>
+                                <p class="card-text">Dimensioni:
+                                    <?php echo $childs->dimension; ?>.
                                 </p>
                             <?php } ?>
                         </div>
