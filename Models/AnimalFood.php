@@ -1,6 +1,6 @@
 <?php
 
-class AnimalFood extends AllProducts
+class AnimalFood extends Products
 {
     public $weight;
     public $ingredients;

@@ -1,6 +1,6 @@
 <?php
 
-class AnimalAccessory extends AllProducts
+class AnimalAccessory extends Products
 {
     public $material;
     public $dimension;
